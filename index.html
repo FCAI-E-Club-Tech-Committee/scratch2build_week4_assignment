@@ -1,1 +1,263 @@
-<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Yassin Mohamed's portfolio featuring web development and cybersecurity projects.">
+    <title>Yassin Mohamed | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container" aria-label="Main navigation">
+            <a href="#home" class="logo">YM<span>.</span></a>
+
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <button class="theme-toggle" id="theme-toggle"
+                type="button" aria-label="Switch to light theme"
+                aria-pressed="false">
+                <span id="theme-icon" aria-hidden="true">☀</span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero section container" id="home">
+            <div class="hero-content">
+                <p class="eyebrow">HELLO, I'M YASSIN</p>
+                <h1>Building digital experiences with <span>code and curiosity.</span></h1>
+                <p class="hero-description">
+                    Computer Science student exploring AI, cybersecurity,
+                    and web development. I enjoy turning ideas into practical projects.
+                </p>
+
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#projects">Explore my work</a>
+                    <a class="button button-secondary" href="#contact">Contact me</a>
+                </div>
+
+                <div class="hero-tags">
+                    <span>Artificial Intelligence</span>
+                    <span>Cybersecurity</span>
+                    <span>Web Development</span>
+                </div>
+            </div>
+
+            <div class="hero-card" aria-label="Developer introduction">
+                <div class="terminal">
+                    <div class="terminal-top">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <p>developer.js</p>
+                    </div>
+
+                    <div class="terminal-body">
+                        <p><span class="code-purple">const</span> developer = {</p>
+                        <p class="indent">name: <span class="code-green">"Yassin"</span>,</p>
+                        <p class="indent">role: <span class="code-green">"CS Student"</span>,</p>
+                        <p class="indent">interests: [</p>
+                        <p class="double-indent"><span class="code-green">"AI"</span>,</p>
+                        <p class="double-indent"><span class="code-green">"Security"</span>,</p>
+                        <p class="double-indent"><span class="code-green">"Development"</span></p>
+                        <p class="indent">],</p>
+                        <p class="indent">status: <span class="code-green">"Learning"</span></p>
+                        <p>};</p>
+                        <p class="terminal-comment">// Always building something new.</p>
+                    </div>
+                </div>
+
+                <div class="floating-badge">Available for collaboration</div>
+            </div>
+        </section>
+
+        <section class="section section-muted" id="about">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">GET TO KNOW ME</p>
+                    <h2>About <span>me</span></h2>
+                    <p>A little about what I do and what drives me.</p>
+                </div>
+
+                <div class="about-grid">
+                    <article class="about-card">
+                        <div class="card-icon" aria-hidden="true">&lt;/&gt;</div>
+                        <h3>Web Development</h3>
+                        <p>Building responsive websites and interactive experiences while learning modern development practices.</p>
+                    </article>
+
+                    <article class="about-card">
+                        <div class="card-icon" aria-hidden="true">AI</div>
+                        <h3>Artificial Intelligence</h3>
+                        <p>Exploring machine learning, intelligent systems, and practical AI-powered applications.</p>
+                    </article>
+
+                    <article class="about-card">
+                        <div class="card-icon" aria-hidden="true">⌘</div>
+                        <h3>Cybersecurity</h3>
+                        <p>Learning security testing, vulnerability research, and ways to build safer applications.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section container" id="projects">
+            <div class="section-heading">
+                <p class="eyebrow">WHAT I'VE BEEN WORKING ON</p>
+                <h2>Featured <span>projects</span></h2>
+                <p>A selection of projects from my development journey.</p>
+            </div>
+
+            <div class="project-filters" role="group" aria-label="Filter projects by category">
+                <button class="filter-button active" type="button"
+                    data-filter="all" aria-pressed="true">All</button>
+                <button class="filter-button" type="button"
+                    data-filter="security" aria-pressed="false">Cybersecurity</button>
+            </div>
+
+            <div class="projects-grid" id="projects-grid">
+                <article class="project-card" data-category="security">
+                    <div class="project-visual visual-purple">
+                        <span class="project-number">01</span>
+                        <span class="project-symbol">&lt;XSS/&gt;</span>
+                        <span class="project-label">SECURITY TOOL</span>
+                    </div>
+
+                    <div class="project-content">
+                        <p class="project-category">Cybersecurity</p>
+                        <h3>SuperXSS</h3>
+                        <p>A project exploring cross site scripting and web application security.</p>
+
+                        <div class="project-tags">
+                            <span>Security</span>
+                            <span>JavaScript</span>
+                        </div>
+
+                        <a class="project-link"
+                            href="https://github.com/yassinmohamed1111/superxss"
+                            target="_blank" rel="noopener noreferrer">
+                            View project ↗
+                        </a>
+                    </div>
+                </article>
+
+                <article class="project-card" data-category="security">
+                    <div class="project-visual visual-blue">
+                        <span class="project-number">02</span>
+                        <span class="project-symbol">{ }</span>
+                        <span class="project-label">SECURITY TOOL</span>
+                    </div>
+
+                    <div class="project-content">
+                        <p class="project-category">Cybersecurity</p>
+                        <h3>Rodork</h3>
+                        <p>A development project focused on security related experimentation On Robotics and ICS.</p>
+
+                        <div class="project-tags">
+                            <span>Programming</span>
+                            <span>Security</span>
+                        </div>
+
+                        <a class="project-link"
+                            href="https://github.com/yassinmohamed1111/rodork"
+                            target="_blank" rel="noopener noreferrer">
+                            View project ↗
+                        </a>
+                    </div>
+                </article>
+            </div>
+
+            <p class="empty-state" id="empty-state" hidden>
+                No projects found in this category.
+            </p>
+        </section>
+
+        <section class="section section-muted" id="skills">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">MY TOOLKIT</p>
+                    <h2>Skills & <span>technologies</span></h2>
+                    <p>Technologies I'm learning and using in my projects.</p>
+                </div>
+
+                <div class="skills-list">
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>JavaScript</span>
+                    <span>Python</span>
+                    <span>C++</span>
+                    <span>Git & GitHub</span>
+                    <span>Web Security</span>
+                    <span>AI & Machine Learning</span>
+                    <span>Responsive Design</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section container" id="contact">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <p class="eyebrow">LET'S CONNECT</p>
+                    <h2>Have an idea? <span>Let's talk.</span></h2>
+                    <p>Interested in collaborating on a project, discussing technology, or sharing ideas? Send me a message.</p>
+
+                    <a class="contact-email"
+                        href="https://github.com/yassinmohamed1111"
+                        target="_blank" rel="noopener noreferrer">
+                        Find me on GitHub ↗
+                    </a>
+                </div>
+
+                <form class="contact-form" id="contact-form" novalidate>
+                    <div class="form-group">
+                        <label for="name">Your name</label>
+                        <input type="text" id="name" name="name"
+                            placeholder="Enter your name"
+                            autocomplete="name" minlength="2"
+                            maxlength="80" required>
+                        <small class="field-error" id="name-error"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" id="email" name="email"
+                            placeholder="you@example.com"
+                            autocomplete="email" maxlength="254" required>
+                        <small class="field-error" id="email-error"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Your message</label>
+                        <textarea id="message" name="message" rows="5"
+                            placeholder="Tell me about your idea..."
+                            minlength="10" maxlength="2000" required></textarea>
+                        <small class="field-error" id="message-error"></small>
+                    </div>
+
+                    <button class="button button-primary submit-button" type="submit">
+                        Validate message →
+                    </button>
+
+                    <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+                    <p class="form-note">Demo form: validation works in your browser, but messages are not sent to a server.</p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <a href="#home" class="logo">YM<span>.</span></a>
+            <p>Designed and built by Yassin Mohamed.</p>
+            <p>© <span id="year"></span> All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
