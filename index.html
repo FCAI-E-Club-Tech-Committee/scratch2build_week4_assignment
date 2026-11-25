@@ -1,1 +1,114 @@
-<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Developer Portfolio | Scratch2build Week 4</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="brand">DevPortfolio</a>
+      <nav aria-label="Primary navigation">
+        <ul class="nav-list">
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="theme-toggle" type="button" class="btn btn-secondary" aria-pressed="false">
+        Dark Mode
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container">
+        <h1 id="hero-heading">Building Clean, Accessible Web Experiences</h1>
+        <p class="hero-subtitle">
+          Front-end developer crafting responsive interfaces with semantic HTML, modern CSS, and vanilla JavaScript.
+        </p>
+      </div>
+    </section>
+
+    <section id="projects" class="projects-section" aria-labelledby="projects-heading">
+      <div class="container">
+        <div class="projects-header">
+          <h2 id="projects-heading">Featured Projects</h2>
+          <div class="filter-group" role="group" aria-label="Filter projects by category">
+            <button type="button" class="filter-btn is-active" data-category="all">All</button>
+            <button type="button" class="filter-btn" data-category="web">Web Apps</button>
+            <button type="button" class="filter-btn" data-category="ui">UI Systems</button>
+            <button type="button" class="filter-btn" data-category="tools">Tools</button>
+          </div>
+        </div>
+
+        <div id="projects-grid" class="projects-grid">
+          <article class="project-card" data-category="web">
+            <span class="badge">Web Apps</span>
+            <h3>TaskFlow Board</h3>
+            <p>Lightweight Kanban workspace with keyboard shortcuts and instant client-side search.</p>
+          </article>
+
+          <article class="project-card" data-category="ui">
+            <span class="badge">UI Systems</span>
+            <h3>Accessible Token Kit</h3>
+            <p>Design tokens, accessible contrast scales, and reusable layout primitives in CSS.</p>
+          </article>
+
+          <article class="project-card" data-category="tools">
+            <span class="badge">Tools</span>
+            <h3>Snippet Vault CLI</h3>
+            <p>Command-line utility and web viewer for organizing reusable code templates.</p>
+          </article>
+
+          <article class="project-card" data-category="web">
+            <span class="badge">Web Apps</span>
+            <h3>Pomodoro Focus Timer</h3>
+            <p>Distraction-free session timer with customizable intervals and audio cues.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section" aria-labelledby="contact-heading">
+      <div class="container contact-box">
+        <h2 id="contact-heading">Get in Touch</h2>
+        <p>Have a project idea or want to collaborate? Send a message below.</p>
+
+        <form id="contact-form" novalidate>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Your name" required />
+            <span id="name-error" class="error-msg" role="alert"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required />
+            <span id="email-error" class="error-msg" role="alert"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="Tell me about your project..." required></textarea>
+            <span id="message-error" class="error-msg" role="alert"></span>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Send Message</button>
+          <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year">2026</span> DevPortfolio. Built with HTML, CSS &amp; JavaScript.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
