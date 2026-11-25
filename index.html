@@ -8,38 +8,101 @@
     </head>
     <body>
         <header>
-            <div class="main-details">
-                <h2 id="name">Moataz Mohamed</h2>
-                <span id="job-title">Backend Developer</span>
+            <div id="name-icon-container">
+                <div class="main-details">
+                    <h1 id="name">Moataz Mohamed</h1>
+                    <span id="job-title">Backend Developer</span>
+                </div>
+                <img id="mode" src="data/light.svg" alt="mode-icon" data-mode="light">
             </div>
             <nav>
                 <ul id="nav-links">
-                    <li>About</li>
-                    <li>Projects</li>
-                    <li>Contact Me</li>
+                    <li data-section="about" data-current="true">About</li>
+                    <li data-section="education" data-current="false">Education</li>
+                    <li data-section="projects" data-current="false">Projects</li>
+                    <li data-section="contact" data-current="false">Contact Me</li>
                 </ul>
             </nav>
-            <img src="" alt="mode-icon">
         </header>
         <main data-active-section="about">
             <section id="about">
-                <h1>About</h1>
+                <h2>About Me</h2>
+                <p>
+                    I am a backend developer and a student at Faculty of Computers and AI - Cairo University.
+                    I have interest in Software Engineering and different computer science fields.
+                </p>
+            </section>
+            <section id="education">
+                <h2>Education</h2>
+                <ul>
+                    <li>Faculty of Computers and AI - Cairo University</li>
+                    <li>Expected Graduation Year: 2029</li>
+                    <li>
+                        <strong>GPA: 3.69</strong>
+                    </li>
+                </ul>
             </section>
             <section id="projects">
-                <h1>Projects</h1>
+                <h2>Projects</h2>
+                <article>
+                    <h3>LectureOrg</h3>
+                    A backend system designed to help students and professors organize lecture resources in an effective way.
+                    <ul>
+                        <li>Data Protection by using JWT Authentication</li>
+                        <li>Easy to use RESTful API</li>
+                        <li>Built with Django, Django REST Framework and SQLite</li>
+                    </ul>
+                    You can find the GitHub repo 
+                    <a href="https://github.com/Moataz35/LectureOrg" target="_blank">here</a>
+                </article>
+                <div id="separator"></div>
+                <article>
+                    <h3>Banking App</h3>
+                    A simple desktop application to manage bank customers' accounts and transactions.
+                    <ul>
+                        <li>Built a banking application using C++ and OOP principles.</li>
+                        <li>Managed user accounts and stored their data in files.</li>
+                        <li>Used the MVC pattern to separate the UI from the business logic.</li>
+                    </ul>
+                    You can find the GitHub repo 
+                    <a href="https://github.com/Moataz35/Bank-App" target="_blank">here</a>
+                </article>
             </section>
             <section id="contact">
-                <h1>Contact Me</h1>
+                <form id="contact-form">
+                    <div class="input-container" id="name-input">
+                        <label for="name-box">Name: </label>
+                        <input type="text" id="name-box">
+                    </div>
+                    <div class="input-container" id="email-input">
+                        <label for="email">Email: </label>
+                        <input type="email" id="email">
+                    </div>
+                    <div class="input-container" id="subject-input">
+                        <label for="subject">Subject: </label>
+                        <input type="text" id="subject">
+                    </div>
+                    <div id="message-input">
+                        <label>Message:</label>
+                        <br>
+                        <textarea id="message" form="contact-form"></textarea>
+                    </div>
+                    <input id="send-btn" type="submit" value="Send">
+                </form>
             </section>
         </main>
         <footer>
             <h2>Social Links</h2>
-            <ul>
+            <ul id="social-links">
                 <li>
-                    <img src="" alt="facebook-logo">
+                    <a href="https://www.facebook.com/share/1HaEks8a6B/" target="_blank">
+                        <img src="data/facebook.svg" alt="facebook-logo">
+                    </a>
                 </li>
                 <li>
-                    <img src="" alt="linkedin-logo">
+                    <a href="https://www.linkedin.com/in/moataz-mohamed-540206335" target="_blank">
+                        <img src="data/linkedin.svg" alt="linkedin-logo">
+                    </a>
                 </li>
             </ul>
             <span>&copy; 2026 Moataz Mohamed</span>
