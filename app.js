@@ -1,10 +1,21 @@
+// app.js
+'use strict';
+
+/* =========================================================
+   1. Client-side persistence (localStorage) with safe defaults
+   ========================================================= */
 const STORAGE_KEY = 'prefs';
 const VALID_THEMES = ['light', 'dark'];
 const VALID_FILTERS = ['all', 'web', 'game', 'creative'];
 
 const defaultPrefs = { theme: 'light', filter: 'all' };
 
-//1
+/**
+ * Reads saved preferences. Never throws:
+ *  - first visit  -> getItem returns null -> JSON.parse(null) is null -> fall back to defaults
+ *  - corrupted JSON or blocked storage -> caught -> defaults
+ *  - unexpected values -> validated against allowed lists
+ */
 function loadPrefs() {
   try {
     const saved = JSON.parse(localStorage.getItem(STORAGE_KEY)) || defaultPrefs;
@@ -27,7 +38,9 @@ function savePrefs(prefs) {
 
 const prefs = loadPrefs();
 
-//2
+/* =========================================================
+   2. Feature A: Dark / Light theme toggle (persisted)
+   ========================================================= */
 function applyTheme(theme) {
   const root = document.documentElement;
   const toggle = document.getElementById('theme-toggle');
@@ -52,7 +65,9 @@ function initThemeToggle() {
   });
 }
 
-//3 
+/* =========================================================
+   3. Feature B: Project category filter (persisted)
+   ========================================================= */
 function applyFilter(filter) {
   const buttons = document.querySelectorAll('.filter-btn');
   const cards = document.querySelectorAll('.card');
@@ -86,7 +101,9 @@ function initProjectFilter() {
   });
 }
 
-//4
+/* =========================================================
+   4. Feature C: Project detail modal (<dialog>)
+   ========================================================= */
 function initModal() {
   const modal = document.getElementById('project-modal');
   const title = document.getElementById('modal-title');
@@ -118,7 +135,9 @@ function initModal() {
   });
 }
 
-//5
+/* =========================================================
+   5. Feature D: Validated contact form (e.preventDefault)
+   ========================================================= */
 function setError(input, message) {
   const errorEl = document.getElementById(`${input.id}-error`);
   errorEl.textContent = message;
@@ -150,7 +169,6 @@ function validateForm(form) {
   return valid;
 }
 
-//6
 function initContactForm() {
   const form = document.getElementById('contact-form');
   const status = document.getElementById('form-status');
@@ -166,7 +184,9 @@ function initContactForm() {
   });
 }
 
-
+/* =========================================================
+   6. Boot: wait until the DOM exists, then wire everything up
+   ========================================================= */
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('year').textContent = new Date().getFullYear();
   initThemeToggle();
