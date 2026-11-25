@@ -1,1 +1,145 @@
-<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jana Sherif | Portfolio</title>
+  <meta name="description" content="Personal portfolio: projects, skills and contact.">
+  <!-- Inline favicon: avoids a 404 for /favicon.ico in the console -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%9A%80%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#home">Jana<span>.dev</span></a>
+      <nav aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="theme-toggle" class="btn btn-ghost" type="button" aria-pressed="false" aria-label="Toggle dark mode">
+        <span id="theme-icon" aria-hidden="true">🌙</span>
+        <span id="theme-label">Dark</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="home" class="hero">
+      <div class="container">
+        <p class="eyebrow">Hi, I'm</p>
+        <h1>Jana Sherif</h1>
+        <p class="lead">Aspiring developer building responsive, interactive web experiences from scratch.</p>
+        <a class="btn btn-primary" href="#projects">See my work</a>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <h2>About me</h2>
+        <div class="about-grid">
+          <p>I’m a second-year Computer Science student at Cairo University, currently exploring different areas of technology to discover where my interests fit best. I enjoy building interactive projects, experimenting with game development, and turning ideas into something visual and functional. I’m looking forward to deepening my programming skills, exploring new technologies, and learning more about game development and creative applications of computer science.</p>
+          <ul class="skills" aria-label="Skills">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Git &amp; GitHub</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section section-alt">
+      <div class="container">
+        <h2>Projects</h2>
+
+        <div class="filters" role="group" aria-label="Filter projects by category">
+          <button class="btn filter-btn" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="btn filter-btn" type="button" data-filter="web" aria-pressed="false">Web</button>
+          <button class="btn filter-btn" type="button" data-filter="game" aria-pressed="false">Game</button>
+          <button class="btn filter-btn" type="button" data-filter="creative" aria-pressed="false">Creative</button>
+        </div>
+        <p id="filter-status" class="muted" aria-live="polite"></p>
+
+        <div class="card-grid">
+          <article class="card" data-category="web" data-title="Weather Dashboard"
+                   data-details="Replace this text: what the project does, the tools you used, and what you learned. Add a link to the live demo or repo if you have one.">
+            <div class="thumb thumb-a" aria-hidden="true"></div>
+            <h3>Weather Dashboard</h3>
+            <p>A small app that fetches and shows the forecast for a city.</p>
+            <button class="btn btn-primary details-btn" type="button">View details</button>
+          </article>
+
+          <article class="card" data-category="game" data-title="2D Dungeon Game"
+                   data-details="Replace this text: describe the gameplay, your role, the engine or language, and what challenges you solved.">
+            <div class="thumb thumb-b" aria-hidden="true"></div>
+            <h3>2D Dungeon Game</h3>
+            <p>A top-down game prototype with simple mechanics and UI.</p>
+            <button class="btn btn-primary details-btn" type="button">View details</button>
+          </article>
+
+          <article class="card" data-category="creative" data-title="Generative Visuals"
+                   data-details="Replace this text: describe the visual effects you made, the software used, and where people can see them.">
+            <div class="thumb thumb-c" aria-hidden="true"></div>
+            <h3>Generative Visuals</h3>
+            <p>Short animated visuals created with real-time tools.</p>
+            <button class="btn btn-primary details-btn" type="button">View details</button>
+          </article>
+
+          <article class="card" data-category="web" data-title="Task Tracker"
+                   data-details="Replace this text: explain the features (add, complete, delete tasks) and how you stored the data.">
+            <div class="thumb thumb-d" aria-hidden="true"></div>
+            <h3>Task Tracker</h3>
+            <p>A to-do list that remembers your tasks between visits.</p>
+            <button class="btn btn-primary details-btn" type="button">View details</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Contact</h2>
+        <form id="contact-form" class="form" novalidate>
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" aria-describedby="name-error">
+            <span id="name-error" class="error" role="alert"></span>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" aria-describedby="email-error">
+            <span id="email-error" class="error" role="alert"></span>
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" aria-describedby="message-error"></textarea>
+            <span id="message-error" class="error" role="alert"></span>
+          </div>
+          <button class="btn btn-primary" type="submit">Send message</button>
+          <p id="form-status" class="success" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="project-modal" aria-labelledby="modal-title">
+    <h3 id="modal-title"></h3>
+    <p id="modal-body"></p>
+    <button id="modal-close" class="btn btn-primary" type="button">Close</button>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year">2026</span> Your Name. Built from scratch with HTML, CSS and JavaScript.</p>
+    </div>
+  </footer>
+</body>
+</html>
