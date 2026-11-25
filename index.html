@@ -1,1 +1,196 @@
-<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ali Abdelhamid | Interactive Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="brand-logo">Ali Abdelhamid</a>
+
+      <nav class="main-nav" aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button
+        type="button"
+        id="themeToggleBtn"
+        class="theme-toggle"
+        aria-label="Toggle dark and light theme"
+        aria-pressed="false"
+      >
+        Dark Mode
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section id="about" class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="eyebrow">Software &amp; Web Developer</p>
+          <h1>Building clean interfaces and practical engineering tools.</h1>
+          <p class="hero-description">
+            Computer science student focused on C++, Qt, modern frontend interfaces,
+            and structured problem solving with clear architecture and responsive design.
+          </p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">Explore Projects</a>
+            <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-label="Core Stack Highlights">
+          <h2>Core Stack</h2>
+          <ul class="stack-list">
+            <li>Semantic HTML5 &amp; Accessible Markup</li>
+            <li>CSS Grid, Flexbox &amp; Custom Properties</li>
+            <li>Modern ES6+ JavaScript &amp; State Persistence</li>
+            <li>Git Feature Branches &amp; Pull Request Hygiene</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <p class="eyebrow">Selected Work</p>
+            <h2>Projects</h2>
+          </div>
+
+          <div
+            class="filter-group"
+            role="group"
+            aria-label="Filter projects by category"
+            id="categoryFilters"
+          >
+            <button type="button" class="filter-btn is-active" data-category="all">
+              All
+            </button>
+            <button type="button" class="filter-btn" data-category="web">
+              Web
+            </button>
+            <button type="button" class="filter-btn" data-category="cpp">
+              C++ &amp; Systems
+            </button>
+            <button type="button" class="filter-btn" data-category="tools">
+              Tools
+            </button>
+          </div>
+        </div>
+
+        <div id="projectsGrid" class="projects-grid">
+          <article class="project-card" data-category="cpp">
+            <span class="project-tag">C++ &amp; Systems</span>
+            <h3>Vole Machine Simulator</h3>
+            <p>
+              Modular simulator modeling ALU, Control Unit, CPU execution cycles,
+              and interactive machine-language inspection.
+            </p>
+          </article>
+
+          <article class="project-card" data-category="cpp">
+            <span class="project-tag">C++ &amp; Systems</span>
+            <h3>Baby Photoshop (Qt &amp; CMake)</h3>
+            <p>
+              Image processing desktop application with image filters, transformations,
+              and a structured C++ object model.
+            </p>
+          </article>
+
+          <article class="project-card" data-category="web">
+            <span class="project-tag">Web</span>
+            <h3>FixIt Campus Issue Tracker</h3>
+            <p>
+              Responsive reporting workflow designed to log, categorize, and track
+              maintenance requests across labs and rooms.
+            </p>
+          </article>
+
+          <article class="project-card" data-category="tools">
+            <span class="project-tag">Tools</span>
+            <h3>Algorithmic Practice Logger</h3>
+            <p>
+              Lightweight workspace for tracking problem tags, time complexities,
+              and post-contest review notes.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <div class="container contact-wrapper">
+        <div class="section-header">
+          <div>
+            <p class="eyebrow">Collaborations &amp; Inquiries</p>
+            <h2>Contact Me</h2>
+          </div>
+        </div>
+
+        <form id="contactForm" class="contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="senderName">Name</label>
+              <input
+                type="text"
+                id="senderName"
+                name="name"
+                placeholder="Your full name"
+                autocomplete="name"
+              />
+              <p class="error-message" id="nameError" role="alert"></p>
+            </div>
+
+            <div class="form-field">
+              <label for="senderEmail">Email</label>
+              <input
+                type="email"
+                id="senderEmail"
+                name="email"
+                placeholder="you@example.com"
+                autocomplete="email"
+              />
+              <p class="error-message" id="emailError" role="alert"></p>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="senderMessage">Message</label>
+            <textarea
+              id="senderMessage"
+              name="message"
+              rows="5"
+              placeholder="Write your message (at least 10 characters)..."
+            ></textarea>
+            <p class="error-message" id="messageError" role="alert"></p>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Send Message</button>
+            <p class="form-status" id="formStatus" aria-live="polite"></p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Built with HTML5, CSS3, and ES6+ JavaScript.</p>
+      <a href="#top" class="back-to-top">Back to Top</a>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
