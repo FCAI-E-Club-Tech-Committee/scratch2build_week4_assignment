@@ -1,1 +1,201 @@
 <!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jana Zawal | Interactive Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="#top" class="brand">Jana<span>.dev</span></a>
+
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button
+        type="button"
+        id="theme-toggle"
+        class="btn btn-outline"
+        aria-label="Toggle color theme"
+        aria-pressed="false"
+      >
+        Dark Mode
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Computer Science & AI Student • Cairo</p>
+          <h1>Building interactive web experiences & 2D game systems.</h1>
+          <p class="lead">
+            I craft responsive frontend interfaces, C#/.NET backend APIs, and physics-driven 2D games in Unity—focused on clean architecture and smooth user experiences.
+          </p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">Explore Projects</a>
+            <a href="#contact" class="btn btn-outline">Get in Touch</a>
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-label="Quick Profile Highlights">
+          <h2>At a Glance</h2>
+          <ul class="stats-list">
+            <li><strong>Focus:</strong> Frontend Web, C# / ASP.NET & Unity 2D</li>
+            <li><strong>Workflow:</strong> Feature-branch Git, Atomic Commits & PRs</li>
+            <li><strong>Problem Solving:</strong> Algorithmic C++ (Codeforces / AtCoder)</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <h2>Featured Projects</h2>
+            <p class="section-subtitle">Filter by domain or open a project card to inspect technical highlights.</p>
+          </div>
+
+          <div class="filter-group" role="group" aria-label="Filter projects by category">
+            <button type="button" class="filter-btn active" data-filter="all">All</button>
+            <button type="button" class="filter-btn" data-filter="web">Web Dev</button>
+            <button type="button" class="filter-btn" data-filter="gamedev">Game Dev</button>
+            <button type="button" class="filter-btn" data-filter="systems">Systems & CS</button>
+          </div>
+        </div>
+
+        <div id="projects-grid" class="projects-grid">
+          <article class="project-card" data-category="gamedev">
+            <span class="badge">Game Dev • Unity & C#</span>
+            <h3>Matakolnesh</h3>
+            <p>A 20-level 2D physics-platformer featuring a Koshary plate protagonist, bouncing spoon ricochet mechanics, and star-based level progression.</p>
+            <div class="card-footer">
+              <span class="tech-tags">Unity • C# • 2D Physics</span>
+              <button type="button" class="btn btn-sm open-modal-btn" data-project="matakolnesh">Details</button>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="web">
+            <span class="badge">Web Dev • HTML & CSS</span>
+            <h3>Scratch2Build Personal Dashboard</h3>
+            <p>Responsive personal dashboard built with semantic HTML5, CSS Flexbox, and custom CSS variables for tracking daily tasks and Git workflows.</p>
+            <div class="card-footer">
+              <span class="tech-tags">HTML5 • CSS3 • Responsive</span>
+              <button type="button" class="btn btn-sm open-modal-btn" data-project="dashboard">Details</button>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="gamedev">
+            <span class="badge">Game Dev • AI & Architecture</span>
+            <h3>2D Enemy AI & Crafting Prototype</h3>
+            <p>2D prototype combining A* Pathfinding with a 5-state Finite State Machine (Waiting, Angry, Chasing, Calming, Exiting) and ScriptableObject cure recipes.</p>
+            <div class="card-footer">
+              <span class="tech-tags">Unity • A* Pathfinding • FSM</span>
+              <button type="button" class="btn btn-sm open-modal-btn" data-project="enemyai">Details</button>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="systems">
+            <span class="badge">Systems • Architecture</span>
+            <h3>Vole Machine Simulator</h3>
+            <p>Collaborative simulation of the Vole machine architecture modeling CPU registers, memory cells, and fetch-decode-execute instruction cycles.</p>
+            <div class="card-footer">
+              <span class="tech-tags">C++ • Computer Architecture • Git</span>
+              <button type="button" class="btn btn-sm open-modal-btn" data-project="vole">Details</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section section-alt">
+      <div class="container">
+        <h2>Core Stack & Tooling</h2>
+        <div class="skills-grid">
+          <div class="skill-box">
+            <h3>Frontend & Web</h3>
+            <p>Semantic HTML5, Responsive CSS Grid/Flexbox, Vanilla JavaScript (ES6+), DOM & BOM Persistence</p>
+          </div>
+          <div class="skill-box">
+            <h3>Backend & Languages</h3>
+            <p>C#, ASP.NET Core Web APIs, C++ (Data Structures & Algorithms)</p>
+          </div>
+          <div class="skill-box">
+            <h3>Game Dev & Collaboration</h3>
+            <p>Unity 2D, A* Pathfinding, Finite State Machines, Git, GitHub PR Workflows</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <div class="container contact-wrapper">
+        <div>
+          <h2>Send a Message</h2>
+          <p class="section-subtitle">Have a project, collaboration idea, or feedback? Drop a note below.</p>
+        </div>
+
+        <form id="contact-form" class="contact-form" novalidate>
+          <div class="form-group">
+            <label for="sender-name">Full Name</label>
+            <input type="text" id="sender-name" name="name" placeholder="e.g., Jana Zawal" required />
+            <small class="error-msg" id="name-error" aria-live="polite"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="sender-email">Email Address</label>
+            <input type="email" id="sender-email" name="email" placeholder="you@example.com" required />
+            <small class="error-msg" id="email-error" aria-live="polite"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="sender-message">Message</label>
+            <textarea id="sender-message" name="message" rows="4" placeholder="Write at least 10 characters..." required></textarea>
+            <small class="error-msg" id="message-error" aria-live="polite"></small>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Send Message</button>
+          <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>© <span id="year"></span> Jana Zawal • Scratch2Build Portfolio</p>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <!-- Project Details Modal -->
+  <div id="project-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+    <div class="modal-card">
+      <div class="modal-header">
+        <span id="modal-badge" class="badge"></span>
+        <button type="button" id="close-modal" class="close-btn" aria-label="Close modal">×</button>
+      </div>
+      <h3 id="modal-title"></h3>
+      <p id="modal-description"></p>
+      <h4>Key Engineering Highlights</h4>
+      <ul id="modal-highlights" class="modal-list"></ul>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
