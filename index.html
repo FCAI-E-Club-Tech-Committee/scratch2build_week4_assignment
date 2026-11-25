@@ -1,1 +1,84 @@
 <!-- index.html -->
+ <head>
+ <title>My Website</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+ </head>
+<body>
+ 
+  <nav>
+    <ul>
+
+     <button id="Dark">Dark </button>
+      <li><a href="styles.css">CSS</a></li>
+      <li><a href="app.js">JS</a></li>
+    </ul>
+  </nav>
+<main>
+    
+            
+    <section id="about">
+        <h2>About Me</h2>
+        <ul>
+     <li>   <p>Hello! I'm  a web developer passionate about creating interactive and user-friendly websites.</p> </li>
+     <li>   <p>  I enjoy learning new technologies and improving my skills.</p> </li>
+        </ul>
+    </section>
+    <section id="control">
+    <section id="search">
+        <h2>Search</h2>
+        <form id="search-form" >
+           
+              <select id="category-input" name="category">
+                <option value="choose a category">Choose a category</option>
+                <option value="Data Science">Data Science</option>
+                <option value="AI Engineering">AI Engineering</option>
+                <option value="Web Development">Web Development</option>
+                <option value="All">All</option>
+              </select>
+           
+            
+            <button type="submit">filter</button>
+        </form>
+        <ul id="search-results"></ul>
+    
+    </section>
+    <section id="add">
+        <h2>Add Project</h2>
+        <form id="add-form">
+            <input type="text" id="project-name" placeholder="Project Name" required>
+            <input type="text" id="project-description" placeholder="Project Description" required>
+           <select id="categoryinput" name="category">
+                <option value="">Choose a category</option>
+                <option value="Data Science">Data Science</option>
+                <option value="AI Engineering">AI Engineering</option>
+                <option value="Web Development">Web Development</option>
+              </select>
+            <button type="submit">Add Project</button>
+        </form> 
+
+    </section>
+    </section>
+    <section class="projects">
+        <h2>Projects</h2>
+        <article category="Web Development">
+          <a name="project-name"> <strong>webscratch</strong></a>
+            <p name="project-description">Description: A simple web scratch project.</p>
+            <p name="project-field"> Field: Web Development</p>
+         </article>
+          <article category="AI Engineering">
+        
+          <a name="project-name"> <strong>helper agent</strong></a>
+            <p name="project-description">Description: An AI-powered helper agent for web applications.</p>
+            <p name="project-field"> Field: AI Engineering</p>
+         </article>
+    </section>
+    
+  </main>  
+<footer>
+    <p>&copy; 2026 My Website. All rights reserved.</p>
+    <p><a href="https://github.com/yoyomosman2015-dotcom" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+</footer>
+  <script src="app.js"></script>
+</body>
