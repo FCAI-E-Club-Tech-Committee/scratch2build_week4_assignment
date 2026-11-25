@@ -1,28 +1,28 @@
 :root {
-  --bg: #ffffff;
-  --bg-alt: #f3f5f9;
-  --text: #1b1f2a;
-  --muted: #5b6475;
-  --card: #ffffff;
-  --border: #dde1ea;
-  --accent: #4f46e5;
+  --bg: #fffaf6;
+  --bg-alt: #f6ebe3;
+  --text: #2b1a15;
+  --muted: #7a5a4d;
+  --card: #fffdfb;
+  --border: #e6d3c7;
+  --accent: #b3261e;
   --accent-text: #ffffff;
-  --error: #c62828;
-  --success: #2e7d32;
+  --error: #9c1c1c;
+  --success: #5c7c2e;
   --radius: 12px;
 }
 
 :root[data-theme="dark"] {
-  --bg: #0f1220;
-  --bg-alt: #161a2e;
-  --text: #eceff7;
-  --muted: #a3abc2;
-  --card: #1c2140;
-  --border: #2c3358;
-  --accent: #8b9bff;
-  --accent-text: #0f1220;
-  --error: #ff8a80;
-  --success: #81c784;
+  --bg: #1a0f0c;
+  --bg-alt: #24150f;
+  --text: #f5e6dd;
+  --muted: #c2a496;
+  --card: #2e1b14;
+  --border: #4a2e23;
+  --accent: #e57363;
+  --accent-text: #1a0f0c;
+  --error: #ff8a75;
+  --success: #a5c77a;
 }
 
 /* ---------- Reset / base ---------- */
@@ -120,10 +120,10 @@ a { color: var(--accent); }
 .card[hidden] { display: none; } /* make sure the hidden attribute wins over display:flex */
 .card .btn { margin-top: auto; align-self: flex-start; }
 .thumb { height: 120px; border-radius: 8px; }
-.thumb-a { background: linear-gradient(135deg, #4f46e5, #06b6d4); }
-.thumb-b { background: linear-gradient(135deg, #f59e0b, #ef4444); }
-.thumb-c { background: linear-gradient(135deg, #10b981, #3b82f6); }
-.thumb-d { background: linear-gradient(135deg, #ec4899, #8b5cf6); }
+.thumb-a { background: linear-gradient(135deg, #b3261e, #7b3f24); }
+.thumb-b { background: linear-gradient(135deg, #d9822b, #8b2c1a); }
+.thumb-c { background: linear-gradient(135deg, #8d5524, #c0392b); }
+.thumb-d { background: linear-gradient(135deg, #a52a2a, #5d3a2a); }
 
 /* ---------- Modal ---------- */
 dialog {
@@ -131,7 +131,7 @@ dialog {
   border: 1px solid var(--border); border-radius: var(--radius);
   background: var(--card); color: var(--text); padding: 1.5rem;
 }
-dialog::backdrop { background: rgba(0, 0, 0, 0.55); }
+dialog::backdrop { background: rgba(30, 10, 5, 0.6); }
 
 /* ---------- Form ---------- */
 .form { display: grid; gap: 1rem; max-width: 560px; }
