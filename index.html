@@ -1,1 +1,76 @@
-<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Malak Usama</h1>
+    <nav>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <button id="theme-toggle">Toggle theme</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="projects">
+       <h2>Projects</h2>
+         <div class="filters">
+           <button class="filter-btn" data-category="all">All</button>
+           <button class="filter-btn" data-category="csharp">C#</button>
+           <button class="filter-btn" data-category="cpp">C++</button>
+         </div>
+
+         <div class="grid">
+           <article class="card" data-category="csharp">
+             <h3>Mischief Managed</h3>
+             <p>A Harry Potter inspired game made with C# using Unity.</p>
+             <a href="https://malakusama.itch.io/mischief-managed-web">Play on itch.io</a>
+           </article>
+
+           <article class="card" data-category="cpp">
+             <h3>Image Filter Project</h3>
+             <p>An app that applies 18 filters to images.</p>
+             <a href="https://github.com/JanaAhmed25/ImageProcessingProject">View on GitHub</a>
+           </article>
+
+           <article class="card" data-category="cpp">
+             <h3>Vole Machine Project</h3>
+             <p>A Vole machine program using C++, OOP concepts, class inheritance and polymorphism.</p>
+             <a href="https://github.com/JanaAhmed25/VoleMachineProject">View on GitHub</a>
+           </article>
+         </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <form id="contact-form">
+        <label for="name">Name</label>
+        <input type="text" id="name">
+        <p class="error" id="name-error"></p>
+
+        <label for="email">Email</label>
+        <input type="text" id="email">
+        <p class="error" id="email-error"></p>
+
+        <label for="message">Message</label>
+        <textarea id="message" rows="5"></textarea>
+        <p class="error" id="message-error"></p>
+
+        <button type="submit">Send</button>
+        <p id="success"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Malak Usama</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
