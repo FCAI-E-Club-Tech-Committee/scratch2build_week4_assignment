@@ -1,4 +1,4 @@
-# Scratch2build Week #4 - Assignment #2
+# Scratch2build Week #4 - Assignment #4
 
 Personal interactive portfolio built from scratch with HTML, CSS and vanilla JavaScript as part of the scratch2build program (Week 4).
 
